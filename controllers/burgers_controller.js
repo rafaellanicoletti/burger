@@ -12,11 +12,11 @@ var burger = require("../models/burger");
 // Route for selectAll
 router.get("/", function (_req, res) {
     burger.selectAll(function (data) {
-        var newBurger = {
+        var newObject = {
             burgers: data
         };
-        console.log(newBurger);
-        res.render("index", newBurger);
+        console.log(newObject);
+        res.render("index", newObject);
     });
 });
 
